@@ -1,1 +1,57 @@
 /* You can add global styles to this file, and also import other style files */
+@import "ag-grid-community/dist/styles/ag-grid.css";
+@import "ag-grid-community/dist/styles/ag-theme-alpine.css";
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #cccccc;
+}
+
+/* ag Grid */
+.icon-pending {
+  cursor: pointer;
+  filter: invert(57%) sepia(88%) saturate(4545%) hue-rotate(175deg)
+    brightness(85%) contrast(93%);
+}
+
+.header-cell-style {
+  justify-content: center;
+}
+
+.cell-style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0 !important;
+}
+
+.cell-num-header-style {
+  width: 100%;
+  text-align: right;
+}
+
+.cell-num-header-flex-style {
+  flex-direction: unset;
+}
+
+.ag-header-cell:hover {
+  background-color: #eeeeee;
+}
+
+.cell-num-header-sort-style {
+  margin-left: 5px;
+}
+
+.cell-num-style {
+  text-align: right;
+}
+
+.text-blue {
+  color: #0985c7;
+  font-weight: 500;
+}

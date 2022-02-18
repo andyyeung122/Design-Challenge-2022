@@ -1,0 +1,29 @@
+<mat-tab-group animationDuration="0ms" style="width: 238px; height: 249px">
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon>menu</mat-icon>
+    </ng-template>
+    <mat-form-field>
+      <mat-label>Search...</mat-label>
+      <input matInput type="text" />
+    </mat-form-field>
+    <section>
+      <p><mat-checkbox [disableRipple]="true"></mat-checkbox></p>
+    </section>
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon>menu</mat-icon>
+    </ng-template>
+    <mat-selection-list [multiple]="false">
+      <mat-list-option>
+        <mat-icon>push_pin</mat-icon>Pin Column
+      </mat-list-option>
+      <mat-divider></mat-divider>
+      <mat-list-option> Autosize This Column </mat-list-option>
+      <mat-list-option> Autosize All Column </mat-list-option>
+      <mat-divider></mat-divider>
+      <mat-list-option> Reset Columns </mat-list-option>
+    </mat-selection-list>
+  </mat-tab>
+</mat-tab-group>
