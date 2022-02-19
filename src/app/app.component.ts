@@ -83,7 +83,7 @@ export class AppComponent {
     {
       field: 'pending actions',
       cellRenderer: () => {
-        return `<img class="icon-pending" src="../assets/pending_actions_black_24dp.svg" />`;
+        return `<img class="icon-pending" src="assets/pending_actions_black_24dp.svg" />`;
       },
       cellClass: 'cell-style',
       headerComponentParams: {
