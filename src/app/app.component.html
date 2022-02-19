@@ -1,13 +1,13 @@
 <!-- Toolbar -->
 <mat-toolbar>
-  <img class="header-row momentum-logo" src="../assets/Momentum-logo.svg" />
-  <img class="header-row momentum-text" src="../assets/Momentum-text.svg" />
+  <img class="header-row momentum-logo" src="assets/Momentum-logo.svg" />
+  <img class="header-row momentum-text" src="assets/Momentum-text.svg" />
 
   <span class="spacer"></span>
 
   <img
     class="header-row profile-logo"
-    src="../assets/account_circle-black-24dp.svg"
+    src="assets/account_circle-black-24dp.svg"
   />
 </mat-toolbar>
 <div class="main-content">
@@ -22,12 +22,12 @@
         <mat-list-item class="sidenav-collapse">
           <img
             *ngIf="!isExpanded"
-            src="../assets/navigate_next_white_36dp.svg"
+            src="assets/navigate_next_white_36dp.svg"
             (click)="expandSideBar()"
           />
           <img
             *ngIf="isExpanded"
-            src="../assets/chevron_left_white_36dp.svg"
+            src="assets/chevron_left_white_36dp.svg"
             (click)="expandSideBar()"
           />
         </mat-list-item>
@@ -36,7 +36,7 @@
           [ngClass]="selectedItem === 'dashboard' ? 'mat-item-select' : ''"
           (click)="onSelect('dashboard')"
         >
-          <img src="../assets/dashboard_icon-white-24px.svg" />
+          <img src="assets/dashboard_icon-white-24px.svg" />
           <span class="sidenav-text" *ngIf="isExpanded"> Dashboard </span>
         </mat-list-item>
         <mat-list-item
@@ -44,7 +44,7 @@
           [ngClass]="selectedItem === 'fund' ? 'mat-item-select' : ''"
           (click)="onSelect('fund')"
         >
-          <img src="../assets/Fund_CCY_Date_icon-white-24dp.svg" />
+          <img src="assets/Fund_CCY_Date_icon-white-24dp.svg" />
           <span class="sidenav-text" *ngIf="isExpanded"> Fund </span>
         </mat-list-item>
         <mat-list-item
@@ -52,7 +52,7 @@
           [ngClass]="selectedItem === 'summary' ? 'mat-item-select' : ''"
           (click)="onSelect('summary')"
         >
-          <img src="../assets/summary_by_fund-white-24px.svg" />
+          <img src="assets/summary_by_fund-white-24px.svg" />
           <span class="sidenav-text" *ngIf="isExpanded"> Summary By Fund </span>
         </mat-list-item>
         <mat-list-item
@@ -60,7 +60,7 @@
           [ngClass]="selectedItem === 'view' ? 'mat-item-select' : ''"
           (click)="onSelect('view')"
         >
-          <img src="../assets/custom_view-white-24dp.svg" />
+          <img src="assets/custom_view-white-24dp.svg" />
           <span class="sidenav-text" *ngIf="isExpanded"> Custom View </span>
         </mat-list-item>
       </mat-nav-list>
