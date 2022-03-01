@@ -15,6 +15,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { FormsModule } from '@angular/forms';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 import 'ag-grid-enterprise';
 
@@ -40,6 +42,8 @@ import { CustomFilterComponent } from './custom-filter/custom-filter.component';
     BrowserAnimationsModule,
     MatTabsModule,
     MatCheckboxModule,
+    FormsModule,
+    NgSelectModule,
   ],
   providers: [MatDatepickerModule, MatNativeDateModule],
   bootstrap: [AppComponent],

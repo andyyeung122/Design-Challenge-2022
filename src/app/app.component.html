@@ -67,7 +67,7 @@
     </mat-sidenav>
     <div class="sidenav-content">
       <div class="grid-actions">
-        <mat-form-field class="datepicker-style" appearance="fill">
+        <mat-form-field class="formfield-style" appearance="fill">
           <mat-label>Date Range</mat-label>
           <mat-date-range-input [rangePicker]="picker">
             <input matStartDate placeholder="From Date" />
@@ -92,17 +92,47 @@
             </mat-datepicker-actions>
           </mat-date-range-picker>
         </mat-form-field>
-        <span class="spacer"></span>
-        <button class="btn-action" mat-button>ACTION ONE</button>
-        <button class="btn-action" mat-button>ACTION TWO</button>
+        <mat-form-field class="formfield-style" appearance="fill">
+          <mat-label>Quick Filter</mat-label>
+          <input matInput type="text" [(ngModel)]="filterInput" />
+        </mat-form-field>
+        <div class="div-actions">
+          <button class="btn-action" mat-button>ACTION ONE</button>
+          <button class="btn-action" mat-button>ACTION TWO</button>
+        </div>
       </div>
+      <ng-select
+        class="autocomplete-style"
+        [items]="fundArray"
+        placeholder="Autocomplete Funds Clients"
+        [multiple]="true"
+        [selectableGroup]="true"
+        [closeOnSelect]="false"
+        [(ngModel)]="selectedFund"
+      >
+        <ng-template
+          ng-option-tmp
+          let-item="item"
+          let-item$="item$"
+          let-index="index"
+        >
+          <mat-checkbox
+            class="checkbox-autocomplete"
+            [disableRipple]="true"
+            [ngModel]="item$.selected"
+            (click)="(false)"
+          ></mat-checkbox>
+          {{ item }}
+        </ng-template>
+      </ng-select>
+
       <mat-accordion>
         <mat-expansion-panel class="mat-elevation-z0">
           <mat-expansion-panel-header>
             <mat-panel-title> Momentum ag-Grid </mat-panel-title>
           </mat-expansion-panel-header>
           <ag-grid-angular
-            style="width: 100%"
+            style="width: 100%; height: 430px"
             class="ag-theme-alpine"
             [rowData]="rowData"
             [columnDefs]="columnDefs"
@@ -111,6 +141,7 @@
             [sideBar]="true"
             [headerHeight]="rowHeight"
             [rowHeight]="rowHeight"
+            [quickFilterText]="filterInput"
           >
           </ag-grid-angular>
         </mat-expansion-panel>

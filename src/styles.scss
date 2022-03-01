@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import "ag-grid-community/dist/styles/ag-grid.css";
 @import "ag-grid-community/dist/styles/ag-theme-alpine.css";
+@import "~@ng-select/ng-select/themes/material.theme.css";
 
 html,
 body {
@@ -54,4 +55,10 @@ body {
 .text-blue {
   color: #0985c7;
   font-weight: 500;
+}
+
+input[type="checkbox"] {
+  background-color: red !important;
+  color: red !important;
+  background: red !important;
 }

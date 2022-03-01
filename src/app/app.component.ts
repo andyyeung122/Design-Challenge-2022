@@ -18,8 +18,10 @@ export class AppComponent {
 
   rowHeight = 45;
 
+  filterInput = '';
+
   fundArray = [
-    'Onshore growth fund lP',
+    'Onshore growth fund LP',
     'Offshore Growth Funds LLC',
     'Event Driven Fund UK LLC',
     'Event Driven Fund US LP',
@@ -48,6 +50,8 @@ export class AppComponent {
     'Liberator Fund LLC',
     'Triumph Fund LP',
   ];
+
+  selectedFund = [];
 
   defaultTemplate =
     '<div class="ag-cell-label-container" role="presentation">' +
@@ -153,6 +157,12 @@ export class AppComponent {
       this.rowData.push(data);
     }
   }
+
+  // public onFilterTextBoxChanged() {
+  //   gridOptions.api.setQuickFilter(
+  //     document.getElementById('filter-text-box').value
+  //   );
+  // }
 
   public onSelect(item: string) {
     this.selectedItem = item;

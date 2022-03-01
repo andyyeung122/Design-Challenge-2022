@@ -113,7 +113,7 @@ mat-icon {
 }
 
 /* Side Bar Content */
-.datepicker-style {
+.formfield-style {
   width: 220px;
   height: 55px;
 }
@@ -126,6 +126,71 @@ mat-icon {
   background-color: $color-secondary !important;
 }
 
+::ng-deep .ng-dropdown-panel {
+  margin-top: 1.25em;
+}
+
+::ng-deep .ng-dropdown-panel .ng-dropdown-panel-items .ng-option {
+  display: flex !important;
+  border-bottom: 1px solid #cccccc !important;
+}
+
+::ng-deep
+  .ng-dropdown-panel
+  .ng-dropdown-panel-items
+  .ng-option.ng-option-selected {
+  background-color: #eeeeee !important;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+::ng-deep .ng-dropdown-panel .ng-dropdown-panel-items {
+  max-height: 210px !important;
+}
+
+::ng-deep .ng-select .ng-clear-wrapper {
+  color: black;
+  margin-right: 10px;
+}
+
+::ng-deep .ng-select-container {
+  padding: 0px 10px 0px 10px;
+}
+
+::ng-deep
+  .ng-select.ng-select-multiple
+  .ng-select-container
+  .ng-value-container
+  .ng-value {
+  background-color: $color-secondary !important;
+  padding-right: 10px;
+}
+
+::ng-deep
+  .ng-select.ng-select-multiple
+  .ng-select-container.ng-has-value
+  .ng-value-container {
+  padding-top: 0.5em;
+}
+
+::ng-deep .ng-placeholder {
+  color: rgba(0, 0, 0, 0.6) !important;
+}
+
+::ng-deep .ng-select.ng-select-focused {
+  background-color: white !important;
+  .ng-placeholder {
+    color: $color-secondary !important;
+  }
+}
+
+::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+  background-color: $color-primary !important;
+}
+
+.checkbox-autocomplete {
+  margin-right: 10px;
+}
+
 .btn-datepicker-apply {
   color: white;
   background: $color-secondary;
@@ -134,6 +199,11 @@ mat-icon {
 .grid-actions {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+
+.div-actions {
+  display: flex;
 }
 
 .btn-action {
@@ -141,6 +211,7 @@ mat-icon {
   width: 136px;
   display: flex;
   justify-content: center;
+  align-items: center;
   font-family: "Open Sans", sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -151,6 +222,16 @@ mat-icon {
   margin: 0 0 0 24px;
   padding-left: 26px;
   padding-right: 26px;
+}
+
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-marked {
+  background-color: red !important;
+}
+
+.autocomplete-style {
+  background-color: rgba(0, 0, 0, 0.04);
+  margin: 20px 0px 0px 0px;
+  padding-bottom: 0px;
 }
 
 /* Panels */
@@ -194,6 +275,6 @@ mat-panel-title {
   color: white;
 }
 
-ag-grid-angular {
-  height: 520px;
-}
+// ag-grid-angular {
+//   height: 400px;
+// }
